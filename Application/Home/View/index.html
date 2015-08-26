@@ -36,10 +36,30 @@ $(function () {
     $("#email").formValidator({ onShow: "", onfocus: "输入的email格式不正确", onCorrect: "输入正确" }).regexValidator({ regExp: "email", dataType: "enum", onError: "email格式不正确" }); 
     //手机验证
     $("#phone").formValidator({ onShow: "", onfocus: "输入的手机号码格式不正确", onCorrect: "输入正确" }).regexValidator({ regExp: "mobile", dataType: "enum", onError: "手机号码格式不正确" }); 
+    //验证格式并ajax验证账号是否存在
+    // $("#loginName").formValidator({onShow:"",onFocus:"会员账号应该为5-16字母、数字或下划线",onCorrect:"输入正确"}).inputValidator({min:5,max:16,onError:"会员账号应该为5-16字母、数字或下划线"}).regexValidator({
+    //            regExp:"username",dataType:"enum",onError:"会员账号格式错误"
+    //     }).ajaxValidator({
+    //         dataType : "json",
+    //         async : true,
+    //         url : "__ROOT__/index.php/Admin/Users/checkLoginKey/",
+    //         success : function(data){
+    //             var json = WST.toJson(data);
+    //             if( json.status == "1" ) {
+    //                 return true;
+    //             } else {
+    //                 return false;
+    //             }
+    //             return "该账号已被使用";
+    //         },
+    //         buttons: $("#dosubmit"),
+    //         onError : "该账号已存在。",
+    //         onWait : "请稍候..."
+    //     }).defaultPassed();
 });
 function submitForm(){
     //add what you want to do
-    $("#myform").submit();
+    // $("#myform").submit();
 }
 </script>
 <style type="text/css">
